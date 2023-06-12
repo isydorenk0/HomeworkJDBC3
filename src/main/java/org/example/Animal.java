@@ -6,8 +6,7 @@ import jakarta.persistence.*;
 public class Animal {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    @SequenceGenerator(name="animal_generator", sequenceName = "animal_seq", allocationSize=1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private int age;
     private String name;
@@ -50,10 +49,4 @@ public class Animal {
     public void setTail(boolean tail) {
         this.tail = tail;
     }
-
-    //    public Animal(int age, String name, boolean tail) {
-//        this.age = age;
-//        this.name = name;
-//        this.tail = tail;
-//    }
 }
